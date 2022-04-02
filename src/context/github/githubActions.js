@@ -1,10 +1,8 @@
 import axios from 'axios'
-const accessToken = process.env.REACT_APP_GITHUB_TOKEN
 const url = process.env.REACT_APP_GITHUB_URL
 
 const github = axios.create({
   baseURL: url,
-  headers: { Authorization: `token ${accessToken}` },
 })
 //makes the fetch to github API to get a list of users.
 const fetchUsers = async (text) => {
